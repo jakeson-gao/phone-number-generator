@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Phone Number Generator - Generate Random UK Phone Numbers</title>
+    <meta name="description" content="Generate random UK phone numbers. Perfect for testing, data generation, and more.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="alternate" hreflang="es" href="../es/uk.html">
+    <link rel="alternate" hreflang="fr" href="../fr/uk.html">
+    <link rel="alternate" hreflang="de" href="../de/uk.html">
+    <link rel="alternate" hreflang="ja" href="../ja/uk.html">
+</head>
+<body>
+    <header>
+        <h1>UK Phone Number Generator</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="us.html" title="US Phone Numbers">US</a></li>
+                <li><a href="uk.html" title="UK Phone Numbers">UK</a></li>
+                <li><a href="ca.html" title="Canada Phone Numbers">Canada</a></li>
+                <li><a href="au.html" title="Australia Phone Numbers">Australia</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <label for="language-select">Language:</label>
+            <select id="language-select" title="Select language">
+                <option value="en" selected>English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <h2>Generate Random UK Phone Numbers</h2>
+        <p>Generate random UK phone numbers instantly. Perfect for testing, data generation, and more.</p>
+        <div class="generator">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" max="100" value="10" title="Number of phone numbers to generate">
+            <button id="generate-btn" title="Generate UK phone numbers">Generate</button>
+        </div>
+        <div id="result"></div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Phone Number Generator. All rights reserved.</p>
+    </footer>
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const countrySelect = document.createElement('select');
+            countrySelect.id = 'country-select';
+            countrySelect.style.display = 'none';
+            const option = document.createElement('option');
+            option.value = 'uk';
+            option.textContent = 'United Kingdom';
+            countrySelect.appendChild(option);
+            document.querySelector('.generator').insertBefore(countrySelect, document.getElementById('quantity'));
+        });
+    </script>
+</body>
+</html>
+

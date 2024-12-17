@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefonnummer-Generator - Zufällige Telefonnummern generieren</title>
+    <meta name="description" content="Generieren Sie zufällige Telefonnummern für verschiedene Länder. Perfekt für Tests, Datengenerierung und mehr.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="alternate" hreflang="en" href="../en/index.html">
+    <link rel="alternate" hreflang="es" href="../es/index.html">
+    <link rel="alternate" hreflang="fr" href="../fr/index.html">
+    <link rel="alternate" hreflang="ja" href="../ja/index.html">
+</head>
+<body>
+    <header>
+        <h1>Telefonnummer-Generator</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Startseite">Startseite</a></li>
+                <li><a href="us.html" title="US-Telefonnummern">USA</a></li>
+                <li><a href="uk.html" title="UK-Telefonnummern">Großbritannien</a></li>
+                <li><a href="ca.html" title="Kanadische Telefonnummern">Kanada</a></li>
+                <li><a href="au.html" title="Australische Telefonnummern">Australien</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <label for="language-select">Sprache:</label>
+            <select id="language-select" title="Sprache auswählen">
+                <option value="de" selected>Deutsch</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <h2>Zufällige Telefonnummern generieren</h2>
+        <p>Wählen Sie ein Land aus und generieren Sie sofort zufällige Telefonnummern. Perfekt für Tests, Datengenerierung und mehr.</p>
+        <div class="generator">
+            <label for="country-select">Land auswählen:</label>
+            <select id="country-select" title="Land auswählen">
+                <option value="us">USA</option>
+                <option value="uk">Großbritannien</option>
+                <option value="ca">Kanada</option>
+                <option value="au">Australien</option>
+            </select>
+            <label for="quantity">Anzahl:</label>
+            <input type="number" id="quantity" min="1" max="100" value="10" title="Anzahl der zu generierenden Telefonnummern">
+            <button id="generate-btn" class="button" title="Telefonnummern generieren">Generieren</button>
+        </div>
+        <div id="result"></div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Telefonnummer-Generator. Alle Rechte vorbehalten.</p>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
+
